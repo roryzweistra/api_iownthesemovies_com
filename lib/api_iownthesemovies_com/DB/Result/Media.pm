@@ -7,8 +7,7 @@ extends 'Wing::DB::Result';
 
 with 'Wing::Role::Result::Field';
 #with 'Wing::Role::Result::PrivilegeField';
-#with 'Wing::Role::Result::Child';
-with 'Wing::Role::Result::Parent';
+with 'Wing::Role::Result::Child';
 with 'Wing::Role::Result::UserControlled';
 
 __PACKAGE__->wing_fields(
@@ -28,7 +27,7 @@ __PACKAGE__->wing_fields(
 __PACKAGE__->wing_children(
     movies  => {
         view            => 'public',
-        related_class   => 'api_iownthesemovies_com::DB::Result::Employee',
+        related_class   => 'api_iownthesemovies_com::DB::Result::Movie',
         related_id      => 'media_id',
     }
 );
